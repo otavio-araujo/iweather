@@ -15,5 +15,6 @@ describe("Component: SelcetList", () => {
 
     fireEvent.press(selectedCity)
     expect(onPress).toHaveBeenCalled()
+    expect(onPress).toHaveBeenCalledWith(data[0])
   })
 })
