@@ -1,4 +1,4 @@
-import { render, screen } from "@testing-library/react-native"
+import { fireEvent, render, screen } from "@testing-library/react-native"
 import { SelectList } from "."
 
 describe("Component: SelcetList", () => {
@@ -10,5 +10,7 @@ describe("Component: SelcetList", () => {
     render(<SelectList data={data} onChange={() => {}} onPress={() => {}} />)
 
     const selectedCity = screen.getByText(/campo/i)
+
+    fireEvent.press(selectedCity)
   })
 })
