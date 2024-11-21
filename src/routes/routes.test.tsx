@@ -11,6 +11,7 @@ describe("Routes: Routes", () => {
 
   it("should be rendered Dashboard screen when a city is defined", async () => {
     render(<Routes />)
+
     const title = await waitFor(() => screen.getByText(/^escolha um local/i))
     expect(title).toBeTruthy()
   })
