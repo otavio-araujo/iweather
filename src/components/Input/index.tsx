@@ -16,6 +16,7 @@ export function Input({ isLoading = false, ...rest }: Props) {
   return (
     <View style={styles.container}>
       <TextInput
+        testID="search-input"
         style={styles.input}
         placeholderTextColor={theme.colors.gray_400}
         {...rest}
